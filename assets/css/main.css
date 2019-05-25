@@ -645,7 +645,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 100%;
 		}
 
 			.image.left img, .image.right img {
@@ -667,17 +667,17 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			margin: 0 0 2rem 0;
-			width: 100%;
+			width: 50%;
 		}
 
 			.image.fit img {
-				width: 100%;
+				width: 50%;
 			}
 
 		.image.main {
 			display: block;
-			margin: 2.5rem 0;
-			width: 100%;
+			margin: 2rem 5.5rem;
+			width: 67%;
 		}
 
 			.image.main img {
@@ -1120,7 +1120,7 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.jpg");
-			background-size: auto, 1735px 695px;
+			background-size: auto, 1835px 795px;
 			background-position: center, center;
 			background-repeat: no-repeat, repeat;
 			z-index: 2;
