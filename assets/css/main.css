@@ -1052,7 +1052,13 @@ input, select, textarea {
 			height: 2.0625rem;
 			line-height: 2.0625rem;
 		}
-
+		input[type="button"].big,
+		button.big,
+		.button.big {
+			font-size: 0.6rem;
+			height: 5.0625rem;
+			line-height: 2.0625rem;
+		}
 		input[type="submit"].primary,
 		input[type="reset"].primary,
 		input[type="button"].primary,
