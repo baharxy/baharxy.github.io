@@ -11,6 +11,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#lang-switcher {
+				text-align: center;
+				margin: 0.5em 0 1em 0;
+			}
+			.lang-btn {
+				background: none;
+				border: 1px solid #33FFFC;
+				color: #33FFFC;
+				padding: 0.3em 0.8em;
+				margin: 0 0.2em;
+				border-radius: 4px;
+				cursor: pointer;
+				font-size: 0.85em;
+			}
+			.lang-btn.active {
+				background: #33FFFC;
+				color: #111;
+				font-weight: bold;
+			}
+			body.rtl-mode {
+				direction: rtl;
+			}
+			body.rtl-mode .lang-block[dir="rtl"],
+			body.rtl-mode .lang-inline[dir="rtl"] {
+				text-align: right;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -27,17 +55,26 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Bahar Partov</h1>
-								<p> Security Engineer &amp; Applied Researcher</p>
+								<p>
+									<span class="lang-inline" data-lang="en">Security Engineer &amp; Applied Researcher</span>
+									<span class="lang-inline" data-lang="fr" style="display:none">Ingénieure en sécurité et chercheuse appliquée</span>
+									<span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">مهندس امنیت و پژوهشگر کاربردی</span>
+								</p>
 							</div>
+						</div>
+						<div id="lang-switcher">
+							<button data-setlang="en" class="lang-btn active">EN</button>
+							<button data-setlang="fr" class="lang-btn">FR</button>
+							<button data-setlang="fa" class="lang-btn">FA</button>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#about">About</a></li>
-								<li><a href="#experience">Experience</a></li>
-								<li><a href="#work">Selected Work</a></li>
-								<li><a href="#community">Community</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<li><a href="#resume">Resume</a></li>
+								<li><a href="#about"><span class="lang-inline" data-lang="en">About</span><span class="lang-inline" data-lang="fr" style="display:none">À propos</span><span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">درباره من</span></a></li>
+								<li><a href="#experience"><span class="lang-inline" data-lang="en">Experience</span><span class="lang-inline" data-lang="fr" style="display:none">Expérience</span><span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">سوابق کاری</span></a></li>
+								<li><a href="#work"><span class="lang-inline" data-lang="en">Selected Work</span><span class="lang-inline" data-lang="fr" style="display:none">Travaux sélectionnés</span><span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">آثار منتخب</span></a></li>
+								<li><a href="#community"><span class="lang-inline" data-lang="en">Community</span><span class="lang-inline" data-lang="fr" style="display:none">Communauté</span><span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">جامعه</span></a></li>
+								<li><a href="#contact"><span class="lang-inline" data-lang="en">Contact</span><span class="lang-inline" data-lang="fr" style="display:none">Contact</span><span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">تماس</span></a></li>
+								<li><a href="#resume"><span class="lang-inline" data-lang="en">Resume</span><span class="lang-inline" data-lang="fr" style="display:none">CV</span><span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">رزومه</span></a></li>
 							</ul>
 						</nav>
 					</header>
@@ -47,31 +84,78 @@
 
 						<!-- About -->
 							<article id="about">
+<div class="lang-block" data-lang="en">
 								<h2 class="major">About</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
 								<p><h4>My interests keep sprawling past whatever boundary I try to draw around them, which I've come to see as a feature, not a flaw. I enjoy solving a mathematical optimisation problem and writing out a lemma as much as I enjoy pushing a system to its experimental limits, or building software and hardware that actually works at scale.<br><br>My PhD and postdoc lived largely in that first, experimental world: proving things, testing them, seeing where the theory holds and where it breaks. The years since have been about building from the ground up: production systems, security infrastructure, things people actually run. Maybe because of that range, I get real satisfaction from working alongside people whose expertise sits nowhere near mine, and learning enough of their world to actually understand the problem we're solving together.</h4></p>
-							</article>
+							</div>
+<div class="lang-block" data-lang="fr" style="display:none">
+								<h2 class="major">À propos</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p><h4>Mes intérêts débordent sans cesse les limites que j'essaie de leur tracer, et j'en suis venue à voir cela comme un atout, pas un défaut. J'aime autant résoudre un problème d'optimisation mathématique et rédiger un lemme que pousser un système jusqu'à ses limites expérimentales, ou construire un logiciel ou un matériel qui fonctionne réellement à grande échelle.<br><br>Mon doctorat et mon postdoctorat se sont déroulés en grande partie dans ce premier monde, expérimental : démontrer des choses, les tester, voir où la théorie tient et où elle échoue. Les années qui ont suivi ont été consacrées à construire à partir de zéro : systèmes de production, infrastructures de sécurité, des choses que les gens utilisent réellement. C'est peut-être grâce à cette diversité que je tire une vraie satisfaction à travailler aux côtés de personnes dont l'expertise est très différente de la mienne, et à apprendre suffisamment de leur domaine pour vraiment comprendre le problème que nous résolvons ensemble.</h4></p>
+							</div>
+<div class="lang-block" data-lang="fa" style="display:none" dir="rtl">
+								<h2 class="major">درباره من</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p><h4>علایق من همیشه از هر مرزی که سعی می‌کنم دورشان بکشم فراتر می‌روند، و این را دیگر یک ویژگی می‌دانم، نه یک نقص. من به همان اندازه که از حل یک مسئله بهینه‌سازی ریاضی و نوشتن یک قضیه لذت می‌برم، از رساندن یک سیستم به حدود آزمایشی‌اش یا ساختن نرم‌افزار و سخت‌افزاری که واقعاً در مقیاس بزرگ کار می‌کند نیز لذت می‌برم.<br><br>دوره دکتری و فوق‌دکتری من عمدتاً در همان دنیای اول، دنیای آزمایشی، سپری شد: اثبات چیزها، آزمودن آن‌ها، دیدن اینکه نظریه کجا درست از آب درمی‌آید و کجا نه. سال‌های بعد به ساختن از پایه اختصاص داشت: سیستم‌های تولیدی، زیرساخت‌های امنیتی، چیزهایی که مردم واقعاً از آن‌ها استفاده می‌کنند. شاید به همین دلیل این گستردگی، لذت واقعی می‌برم از کار کردن در کنار افرادی که تخصصشان به‌کلی متفاوت از من است، و یاد گرفتن آنقدر از دنیای آن‌ها که واقعاً مسئله‌ای را که با هم حل می‌کنیم، بفهمم.</h4></p>
+							</div>
+</article>
 
 						<!-- Experience -->
 							<article id="experience">
+<div class="lang-block" data-lang="en">
 								<h2 class="major">Experience</h2>
-								<li><h4><font color="#33FFFC">Engineering Manager, Security</font> — Tucows Inc <i>(2025 – present)</i></h4></li>
+								<li><h4><font color="#33FFFC">Engineering Manager, Security</font> at Tucows Inc <i>(2025 – present)</i></h4></li>
 								<p>Leading the engineering team and cross-functional SDLC security initiatives, while remaining hands-on with backend security and DNS abuse mitigation. Applying AI-driven tooling to strengthen security operations and SDLC workflows.</p>
-								<li><h4><font color="#33FFFC">Software Engineer: Back-end &amp; Security</font> — Tucows Inc <i>(2020 – 2025)</i></h4></li>
+								<li><h4><font color="#33FFFC">Software Engineer: Back-end &amp; Security</font> at Tucows Inc <i>(2020 – 2025)</i></h4></li>
 								<p>Built abuse-detection and security tooling for large-scale networked systems (Go, Perl, Lua, Bash); designed REST APIs and a micro-service observability platform (Grafana, PostgreSQL, RabbitMQ). Represented Tucows in ICANN's CPH/TechOps working group.</p>
-								<li><h4><font color="#33FFFC">Software Consultant: DevOps</font> — Chebucto Community Net <i>(2020)</i></h4></li>
+								<li><h4><font color="#33FFFC">Software Consultant: DevOps</font> at Chebucto Community Net <i>(2020)</i></h4></li>
 								<p>Modernised two-decade-old infrastructure for a volunteer-run community network, migrating ~600 user accounts to new services.</p>
-								<li><h4><font color="#33FFFC">Co-Founder &amp; Tech Lead</font> — Wavelite / Haila Technologies <i>(2017 – 2019)</i></h4></li>
+								<li><h4><font color="#33FFFC">Co-Founder &amp; Tech Lead</font> at Wavelite / Haila Technologies <i>(2017 – 2019)</i></h4></li>
 								<p>See <a href="#Entrepreneurship" style="color:#33FFFC">Miscellaneous</a> below for more on this venture-backed IoT startup.</p>
-								<li><h4><font color="#33FFFC">Visiting Postdoctoral Fellow</font> — MIT CSAIL <i>(2016 – 2017)</i></h4></li>
-								<li><h4><font color="#33FFFC">Research Fellow</font> — Trinity College Dublin <i>(2015 – 2016)</i></h4></li>
-								<li><h4><font color="#33FFFC">PhD Research Fellow</font> — Nokia Bell Labs <i>(2012 – 2015)</i></h4></li>
-								<li><h4><font color="#33FFFC">Engineer</font> — Oclaro Inc (now Lumentum), Paignton, UK <i>(2010 – 2012)</i></h4></li>
+								<li><h4><font color="#33FFFC">Visiting Postdoctoral Fellow</font> at MIT CSAIL <i>(2016 – 2017)</i></h4></li>
+								<li><h4><font color="#33FFFC">Research Fellow</font> at Trinity College Dublin <i>(2015 – 2016)</i></h4></li>
+								<li><h4><font color="#33FFFC">PhD Research Fellow</font> at Nokia Bell Labs <i>(2012 – 2015)</i></h4></li>
+								<li><h4><font color="#33FFFC">Engineer</font> at Oclaro Inc (now Lumentum), Paignton, UK <i>(2010 – 2012)</i></h4></li>
 								<p>See <a href="#work" style="color:#33FFFC">Selected Work</a> for publications from this period.</p>
-							</article>
+							</div>
+<div class="lang-block" data-lang="fr" style="display:none">
+								<h2 class="major">Expérience</h2>
+								<li><h4><font color="#33FFFC">Responsable ingénierie, sécurité</font> chez Tucows Inc <i>(2025 – présent)</i></h4></li>
+								<p>Diriger l'équipe d'ingénierie et les initiatives de sécurité du cycle de développement logiciel de façon transversale, tout en restant impliquée directement dans la sécurité back-end et l'atténuation des abus DNS. Application d'outils basés sur l'IA pour renforcer les opérations de sécurité et les flux de travail du cycle de développement.</p>
+								<li><h4><font color="#33FFFC">Ingénieure logicielle : back-end et sécurité</font> chez Tucows Inc <i>(2020 – 2025)</i></h4></li>
+								<p>Développement d'outils de détection d'abus et de sécurité pour des systèmes en réseau à grande échelle (Go, Perl, Lua, Bash) ; conception d'API REST et d'une plateforme d'observabilité en micro-services (Grafana, PostgreSQL, RabbitMQ). Représentante de Tucows au sein du groupe de travail CPH/TechOps de l'ICANN.</p>
+								<li><h4><font color="#33FFFC">Consultante logicielle : DevOps</font> chez Chebucto Community Net <i>(2020)</i></h4></li>
+								<p>Modernisation d'une infrastructure vieille de vingt ans pour un réseau communautaire géré par des bénévoles, migrant environ 600 comptes utilisateurs vers de nouveaux services.</p>
+								<li><h4><font color="#33FFFC">Cofondatrice et responsable technique</font> chez Wavelite / Haila Technologies <i>(2017 – 2019)</i></h4></li>
+								<p>Voir <a href="#Entrepreneurship" style="color:#33FFFC">Divers</a> ci-dessous pour en savoir plus sur cette start-up soutenue par du capital-risque.</p>
+								<li><h4><font color="#33FFFC">Chercheuse postdoctorale invitée</font> au MIT CSAIL <i>(2016 – 2017)</i></h4></li>
+								<li><h4><font color="#33FFFC">Chercheuse associée</font> à Trinity College Dublin <i>(2015 – 2016)</i></h4></li>
+								<li><h4><font color="#33FFFC">Chercheuse doctorante</font> chez Nokia Bell Labs <i>(2012 – 2015)</i></h4></li>
+								<li><h4><font color="#33FFFC">Ingénieure</font> chez Oclaro Inc (aujourd'hui Lumentum), Paignton, Royaume-Uni <i>(2010 – 2012)</i></h4></li>
+								<p>Voir <a href="#work" style="color:#33FFFC">Travaux sélectionnés</a> pour les publications de cette période.</p>
+							</div>
+<div class="lang-block" data-lang="fa" style="display:none" dir="rtl">
+								<h2 class="major">سوابق کاری</h2>
+								<li><h4><font color="#33FFFC">مدیر مهندسی، امنیت</font> در Tucows Inc <i>(۲۰۲۵ تا کنون)</i></h4></li>
+								<p>رهبری تیم مهندسی و ابتکارات امنیتی میان‌بخشی در چرخه توسعه نرم‌افزار، همراه با مشارکت مستقیم در امنیت بک‌اند و کاهش سوءاستفاده از DNS. به‌کارگیری ابزارهای مبتنی بر هوش مصنوعی برای تقویت عملیات امنیتی و فرآیندهای توسعه.</p>
+								<li><h4><font color="#33FFFC">مهندس نرم‌افزار: بک‌اند و امنیت</font> در Tucows Inc <i>(۲۰۲۰ تا ۲۰۲۵)</i></h4></li>
+								<p>توسعه ابزارهای تشخیص سوءاستفاده و امنیت برای سیستم‌های شبکه‌ای در مقیاس بزرگ (Go، Perl، Lua، Bash)؛ طراحی رابط‌های برنامه‌نویسی REST و پلتفرم مشاهده‌پذیری میکروسرویسی (Grafana، PostgreSQL، RabbitMQ). نماینده Tucows در گروه کاری CPH/TechOps سازمان ICANN.</p>
+								<li><h4><font color="#33FFFC">مشاور نرم‌افزار: DevOps</font> در Chebucto Community Net <i>(۲۰۲۰)</i></h4></li>
+								<p>نوسازی زیرساخت دو دهه‌ای یک شبکه محلی داوطلبانه، با انتقال حدود ۶۰۰ حساب کاربری به سرویس‌های جدید.</p>
+								<li><h4><font color="#33FFFC">هم‌بنیان‌گذار و مدیر فنی</font> در Wavelite / Haila Technologies <i>(۲۰۱۷ تا ۲۰۱۹)</i></h4></li>
+								<p>برای اطلاعات بیشتر درباره این استارتاپ با سرمایه‌گذاری خطرپذیر، به بخش <a href="#Entrepreneurship" style="color:#33FFFC">متفرقه</a> در پایین مراجعه کنید.</p>
+								<li><h4><font color="#33FFFC">پژوهشگر فوق‌دکتری مهمان</font> در MIT CSAIL <i>(۲۰۱۶ تا ۲۰۱۷)</i></h4></li>
+								<li><h4><font color="#33FFFC">پژوهشگر همکار</font> در Trinity College Dublin <i>(۲۰۱۵ تا ۲۰۱۶)</i></h4></li>
+								<li><h4><font color="#33FFFC">پژوهشگر دکتری</font> در Nokia Bell Labs <i>(۲۰۱۲ تا ۲۰۱۵)</i></h4></li>
+								<li><h4><font color="#33FFFC">مهندس</font> در Oclaro Inc (اکنون Lumentum)، پینگتون، بریتانیا <i>(۲۰۱۰ تا ۲۰۱۲)</i></h4></li>
+								<p>برای انتشارات این دوره به بخش <a href="#work" style="color:#33FFFC">آثار منتخب</a> مراجعه کنید.</p>
+							</div>
+</article>
 
 						<!-- Work -->
 							<article id="work">
+<div class="lang-block" data-lang="en">
 								<h2 class="major">Selected Work</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<ul class="actions">
@@ -83,8 +167,36 @@
 									<li><a href="#Writing" class="button">Talks &amp; Writing</a></li>
 									<li><a href="#Music" class="button">Music</a></li>
 						  	</ul>
-							</article>
+							</div>
+<div class="lang-block" data-lang="fr" style="display:none">
+								<h2 class="major">Travaux sélectionnés</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<ul class="actions">
+									<li><a href="#Optimization" class="button">Optimisation</a></li>
+									<li><a href="#Technology" class="button">Conception et évaluation </a></li>
+									<li><a href="#Entrepreneurship" class="button">Divers</a></li>
+							  </ul>
+							  <ul class="actions">
+									<li><a href="#Writing" class="button">Interventions et écrits</a></li>
+									<li><a href="#Music" class="button">Musique</a></li>
+						  	</ul>
+							</div>
+<div class="lang-block" data-lang="fa" style="display:none" dir="rtl">
+								<h2 class="major">آثار منتخب</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<ul class="actions">
+									<li><a href="#Optimization" class="button">بهینه‌سازی</a></li>
+									<li><a href="#Technology" class="button">طراحی و ارزیابی</a></li>
+									<li><a href="#Entrepreneurship" class="button">متفرقه</a></li>
+							  </ul>
+							  <ul class="actions">
+									<li><a href="#Writing" class="button">سخنرانی‌ها و نوشته‌ها</a></li>
+									<li><a href="#Music" class="button">موسیقی</a></li>
+						  	</ul>
+							</div>
+</article>
               <article id="Optimization">
+<div class="lang-block" data-lang="en">
 								<h2 class="major">Optimization</h2>
 									<li><h4><font color="#33FFFC"> <a href=https://baharxy.github.io/files/CellAssociationBLC_v10.pdf> Recommending access points to individual mobile users via automatic group learning.</font></a> Collaboration with Prof Doug Leith (TCD) and Alex Checco (Sheffield University)</h4></li>
 									<li><h4><font color="#33FFFC"><a href=https://arxiv.org/pdf/1506.01058.pdf>Utility Fair Rate Allocation in 802.11/LTE Networks.</font></a> Collaboration with Prof Doug Leith (TCD)</li>
@@ -94,8 +206,32 @@
 									<li><h4><font color="#33FFFC"><a href=https://www.scss.tcd.ie/Doug.Leith/partovb/Small_Cell_EE_v4.pdf>Energy-aware configuration of small cell networks.</font></a> Collaboration with Prof Doug Leith (TCD), Rouzbeh Razavi (Kent State University)<font color="#33FFFC"> <a href=https://github.com/baharxy/mobility-logger>Android code for mobility measurements</font></a></h4></li>
 									<li><h4><font color="#33FFFC"><a href=http://mural.maynoothuniversity.ie/6956/1/HI-Tilt-Angle-Adaptation.pdf>Tilt angle adaptation in LTE networks with advanced interference mitigation.</font></a> Collaboration with Prof Doug Leith (TCD), Rouzbeh Razavi (Kent State University)</h4></li>
 									<li><h4><font color="#33FFFC"><a href=https://arxiv.org/pdf/1310.1015.pdf>Utility fair optimization of antenna tilt angles in LTE networks</font></a> Collaboration with Prof Doug Leith (TCD), Rouzbeh Razavi (Kent State University)</h4></li>
-							</article>
+							</div>
+<div class="lang-block" data-lang="fr" style="display:none">
+								<h2 class="major">Optimisation</h2>
+									<li><h4><font color="#33FFFC"> <a href=https://baharxy.github.io/files/CellAssociationBLC_v10.pdf> Recommending access points to individual mobile users via automatic group learning.</font></a> Collaboration avec le Prof. Doug Leith (TCD) et Alex Checco (Université de Sheffield)</h4></li>
+									<li><h4><font color="#33FFFC"><a href=https://arxiv.org/pdf/1506.01058.pdf>Utility Fair Rate Allocation in 802.11/LTE Networks.</font></a> Collaboration avec le Prof. Doug Leith (TCD)</li>
+									<li><h4><font color="#33FFFC"> <a href=https://www.scss.tcd.ie/Doug.Leith/pubs/Bahar_thesis.pdf> Thèse de doctorat</font></a></h4></li>
+									<li><h4><font color="#33FFFC"><a href=https://www.scss.tcd.ie/Doug.Leith/partovb/Allerton.pdf>Utility Fair RAT Selection in Multi-Homed LTE/802.11 Networks.</font></a> Collaboration avec le Prof. Doug Leith (TCD)</h4></li>
+									<li><h4><font color="#33FFFC"><a href=http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.706.7923&rep=rep1&type=pdf>Dynamic idle mode control in small cell networks.</font></a> Collaboration avec le Prof. Doug Leith (TCD), Rouzbeh Razavi (Kent State University), Holger Claussen (Bell Labs, Nokia)</h4></li>
+									<li><h4><font color="#33FFFC"><a href=https://www.scss.tcd.ie/Doug.Leith/partovb/Small_Cell_EE_v4.pdf>Energy-aware configuration of small cell networks.</font></a> Collaboration avec le Prof. Doug Leith (TCD), Rouzbeh Razavi (Kent State University)<font color="#33FFFC"> <a href=https://github.com/baharxy/mobility-logger>code Android pour les mesures de mobilité</font></a></h4></li>
+									<li><h4><font color="#33FFFC"><a href=http://mural.maynoothuniversity.ie/6956/1/HI-Tilt-Angle-Adaptation.pdf>Tilt angle adaptation in LTE networks with advanced interference mitigation.</font></a> Collaboration avec le Prof. Doug Leith (TCD), Rouzbeh Razavi (Kent State University)</h4></li>
+									<li><h4><font color="#33FFFC"><a href=https://arxiv.org/pdf/1310.1015.pdf>Utility fair optimization of antenna tilt angles in LTE networks</font></a> Collaboration avec le Prof. Doug Leith (TCD), Rouzbeh Razavi (Kent State University)</h4></li>
+							</div>
+<div class="lang-block" data-lang="fa" style="display:none" dir="rtl">
+								<h2 class="major">بهینه‌سازی</h2>
+									<li><h4><font color="#33FFFC"> <a href=https://baharxy.github.io/files/CellAssociationBLC_v10.pdf> Recommending access points to individual mobile users via automatic group learning.</font></a> همکاری با پروفسور داگ لیث (TCD) و الکس چکو (دانشگاه شفیلد)</h4></li>
+									<li><h4><font color="#33FFFC"><a href=https://arxiv.org/pdf/1506.01058.pdf>Utility Fair Rate Allocation in 802.11/LTE Networks.</font></a> همکاری با پروفسور داگ لیث (TCD)</li>
+									<li><h4><font color="#33FFFC"> <a href=https://www.scss.tcd.ie/Doug.Leith/pubs/Bahar_thesis.pdf> رساله دکتری</font></a></h4></li>
+									<li><h4><font color="#33FFFC"><a href=https://www.scss.tcd.ie/Doug.Leith/partovb/Allerton.pdf>Utility Fair RAT Selection in Multi-Homed LTE/802.11 Networks.</font></a> همکاری با پروفسور داگ لیث (TCD)</h4></li>
+									<li><h4><font color="#33FFFC"><a href=http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.706.7923&rep=rep1&type=pdf>Dynamic idle mode control in small cell networks.</font></a> همکاری با پروفسور داگ لیث (TCD)، روزبه رضوی (دانشگاه ایالتی کنت)، هولگر کلاوزن (بل لبز، نوکیا)</h4></li>
+									<li><h4><font color="#33FFFC"><a href=https://www.scss.tcd.ie/Doug.Leith/partovb/Small_Cell_EE_v4.pdf>Energy-aware configuration of small cell networks.</font></a> همکاری با پروفسور داگ لیث (TCD)، روزبه رضوی (دانشگاه ایالتی کنت)<font color="#33FFFC"> <a href=https://github.com/baharxy/mobility-logger>کد اندروید برای اندازه‌گیری‌های تحرک</font></a></h4></li>
+									<li><h4><font color="#33FFFC"><a href=http://mural.maynoothuniversity.ie/6956/1/HI-Tilt-Angle-Adaptation.pdf>Tilt angle adaptation in LTE networks with advanced interference mitigation.</font></a> همکاری با پروفسور داگ لیث (TCD)، روزبه رضوی (دانشگاه ایالتی کنت)</h4></li>
+									<li><h4><font color="#33FFFC"><a href=https://arxiv.org/pdf/1310.1015.pdf>Utility fair optimization of antenna tilt angles in LTE networks</font></a> همکاری با پروفسور داگ لیث (TCD)، روزبه رضوی (دانشگاه ایالتی کنت)</h4></li>
+							</div>
+</article>
 							<article id="Technology">
+<div class="lang-block" data-lang="en">
 								<h2 class="major">Design and Evaluation</h2>
 								<li><h4><font color="#33FFFC"><a href=https://dl.acm.org/citation.cfm?id=3230578>Chorus: truly distributed distributed-MIMO.</font></a> Collaboration with Haraharian Rahul (CSAIL, MIT) and Ezzeldin Hamed (Microsoft Research)</h4></li>
 								<li><h4><font color="#33FFFC"><a href=https://ieeexplore.ieee.org/abstract/document/8292655/>Real-time cloud robotics in practical smart city applications.</font></a> Collaboration with Nazli Khan Beigi (McGill) and Soodeh Farokhi (C2RO Cloud Robatics)</h4></li>
@@ -103,33 +239,103 @@
 								<li><h4><font color="#33FFFC"><a href=https://www.sciencedirect.com/science/article/pii/S0960148111002564>Development of a high speed wideband frequency tunable infra-red laser source for real-time wind turbine array sensing applications.</font></a> Collaboration with Philip Mitchel  and Adrian Janssen (Oclaro)</h4></li>
 								<li><h4><font color="#33FFFC"><a href=https://www.scss.tcd.ie/Doug.Leith/partovb/multMediaPap9.pdf>Channel adaptive video stream switching for broadband wireless links.</font></a> Collaboration with Martin fleury and Mohamed Ghanbari (University of Essex)</h4></li>
 								<li><h4><font color="#33FFFC"><a href=http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.300.1188&rep=rep1&type=pdf>Adaptive video stream switching for an IEEE 802.16 channel.</font></a> Collaboration with Martin fleury and Mohamed Ghanbari (University of Essex)</h4></li>
-       			 </article>
+       			 </div>
+<div class="lang-block" data-lang="fr" style="display:none">
+								<h2 class="major">Conception et évaluation</h2>
+								<li><h4><font color="#33FFFC"><a href=https://dl.acm.org/citation.cfm?id=3230578>Chorus: truly distributed distributed-MIMO.</font></a> Collaboration avec Haraharian Rahul (CSAIL, MIT) et Ezzeldin Hamed (Microsoft Research)</h4></li>
+								<li><h4><font color="#33FFFC"><a href=https://ieeexplore.ieee.org/abstract/document/8292655/>Real-time cloud robotics in practical smart city applications.</font></a> Collaboration avec Nazli Khan Beigi (McGill) et Soodeh Farokhi (C2RO Cloud Robotics)</h4></li>
+								<li><h4><font color="#33FFFC"><a href=https://dl.acm.org/citation.cfm?id=2980169>Experimental evaluation of multi-path schedulers for LTE/Wi-Fi devices.</font></a> Collaboration avec le Prof. Doug Leith (TCD). <font color="#33FFFC"> <a href=https://github.com/baharxy/LTEWiFi-Measurements>code pour les mesures</a> , <a <href=href=https://github.com/baharxy/multipath_scheduling> code de planification</a> </font></h4></li>
+								<li><h4><font color="#33FFFC"><a href=https://www.sciencedirect.com/science/article/pii/S0960148111002564>Development of a high speed wideband frequency tunable infra-red laser source for real-time wind turbine array sensing applications.</font></a> Collaboration avec Philip Mitchel et Adrian Janssen (Oclaro)</h4></li>
+								<li><h4><font color="#33FFFC"><a href=https://www.scss.tcd.ie/Doug.Leith/partovb/multMediaPap9.pdf>Channel adaptive video stream switching for broadband wireless links.</font></a> Collaboration avec Martin Fleury et Mohamed Ghanbari (Université d'Essex)</h4></li>
+								<li><h4><font color="#33FFFC"><a href=http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.300.1188&rep=rep1&type=pdf>Adaptive video stream switching for an IEEE 802.16 channel.</font></a> Collaboration avec Martin Fleury et Mohamed Ghanbari (Université d'Essex)</h4></li>
+       			 </div>
+<div class="lang-block" data-lang="fa" style="display:none" dir="rtl">
+								<h2 class="major">طراحی و ارزیابی</h2>
+								<li><h4><font color="#33FFFC"><a href=https://dl.acm.org/citation.cfm?id=3230578>Chorus: truly distributed distributed-MIMO.</font></a> همکاری با هاراهاریان راهول (CSAIL، MIT) و عزالدین حامد (مایکروسافت ریسرچ)</h4></li>
+								<li><h4><font color="#33FFFC"><a href=https://ieeexplore.ieee.org/abstract/document/8292655/>Real-time cloud robotics in practical smart city applications.</font></a> همکاری با نازلی خان بیگی (مک‌گیل) و سوده فرخی (C2RO Cloud Robotics)</h4></li>
+								<li><h4><font color="#33FFFC"><a href=https://dl.acm.org/citation.cfm?id=2980169>Experimental evaluation of multi-path schedulers for LTE/Wi-Fi devices.</font></a> همکاری با پروفسور داگ لیث (TCD). <font color="#33FFFC"> <a href=https://github.com/baharxy/LTEWiFi-Measurements>کد اندازه‌گیری</a> ، <a <href=href=https://github.com/baharxy/multipath_scheduling> کد زمان‌بندی</a> </font></h4></li>
+								<li><h4><font color="#33FFFC"><a href=https://www.sciencedirect.com/science/article/pii/S0960148111002564>Development of a high speed wideband frequency tunable infra-red laser source for real-time wind turbine array sensing applications.</font></a> همکاری با فیلیپ میچل و آدریان جانسن (Oclaro)</h4></li>
+								<li><h4><font color="#33FFFC"><a href=https://www.scss.tcd.ie/Doug.Leith/partovb/multMediaPap9.pdf>Channel adaptive video stream switching for broadband wireless links.</font></a> همکاری با مارتین فلوری و محمد قنبری (دانشگاه اسکس)</h4></li>
+								<li><h4><font color="#33FFFC"><a href=http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.300.1188&rep=rep1&type=pdf>Adaptive video stream switching for an IEEE 802.16 channel.</font></a> همکاری با مارتین فلوری و محمد قنبری (دانشگاه اسکس)</h4></li>
+       			 </div>
+</article>
 						 <article id="Entrepreneurship">
+<div class="lang-block" data-lang="en">
 							 <h2 class="major">Miscellaneous</h2>
 							 <p><h4> I contributed to the launch of a startup, Wavelite (Recently known as HaiLa) in Montreal between March 2017- May 2019.  HaiLa is a hardware/software IoT solution that aims at enabling scalable and sustainable development of IoT sensors. The technology addresses the key challenge with limited life time of wireless sensors. </h4><p>
 							 <p><h4>I worked as the technical lead, contributed  towards  building functional prototypes, technology roadmap creation, recruiting, and steering the software and hardware development. As a result of our work, we filed a number of provisional patents under "SYSTEMS AND METHODS FOR PASSIVE WIRELESS DEVICES", in addition to the external patents that were licesnsed through university collaborations.</h4></p>
 							 <li><h4><font color="#33FFFC"><a href=http://www.montrealintechnology.com/wavelite-receives-the-2018-ces-eureka-park-climate-change-award/=3230578> http://www.montrealintechnology.com/wavelite-receives-the-2018-ces-eureka-park-climate-change-award/=3230578</font></a> </h4></li>
 							 <li><h4><font color="#33FFFC"><a href=https://www.rfidjournal.com/articles/view?17653> https://www.rfidjournal.com/articles/view?17653 </font></a></h4></li>
-							 <p><h4>Alongside the startup, I founded the first Canadian chapter of Women of MENA in Tech in Montreal — profiled here:</h4></p>
-							 <li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/inclusion/why-are-there-so-many-persian-women-in-technology/>Why Are There So Many Persian Women in Technology?</font></a> — URelles Magazine, on founding the Montreal chapter</h4></li>
-						</article>
+							 <p><h4>Alongside the startup, I founded the first Canadian chapter of Women of MENA in Tech in Montreal, profiled here:</h4></p>
+							 <li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/inclusion/why-are-there-so-many-persian-women-in-technology/>Why Are There So Many Persian Women in Technology?</font></a>, URelles Magazine, on founding the Montreal chapter</h4></li>
+						</div>
+<div class="lang-block" data-lang="fr" style="display:none">
+							 <h2 class="major">Divers</h2>
+							 <p><h4> J'ai contribué au lancement d'une start-up, Wavelite (rebaptisée depuis HaiLa) à Montréal entre mars 2017 et mai 2019. HaiLa est une solution IoT matérielle et logicielle visant à permettre un développement évolutif et durable de capteurs IoT. La technologie répond au défi majeur de la durée de vie limitée des capteurs sans fil. </h4><p>
+							 <p><h4>J'y ai travaillé comme responsable technique, contribuant à la construction de prototypes fonctionnels, à la création de la feuille de route technologique, au recrutement, et à la direction du développement logiciel et matériel. Nos travaux ont donné lieu au dépôt de plusieurs demandes de brevet provisoires sous "SYSTEMS AND METHODS FOR PASSIVE WIRELESS DEVICES", en plus de brevets externes concédés sous licence via des collaborations universitaires.</h4></p>
+							 <li><h4><font color="#33FFFC"><a href=http://www.montrealintechnology.com/wavelite-receives-the-2018-ces-eureka-park-climate-change-award/=3230578> http://www.montrealintechnology.com/wavelite-receives-the-2018-ces-eureka-park-climate-change-award/=3230578</font></a> </h4></li>
+							 <li><h4><font color="#33FFFC"><a href=https://www.rfidjournal.com/articles/view?17653> https://www.rfidjournal.com/articles/view?17653 </font></a></h4></li>
+							 <p><h4>En parallèle de la start-up, j'ai fondé le premier chapitre canadien de Women of MENA in Tech à Montréal, présenté ici :</h4></p>
+							 <li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/inclusion/why-are-there-so-many-persian-women-in-technology/>Why Are There So Many Persian Women in Technology?</font></a>, magazine URelles, sur la fondation du chapitre de Montréal</h4></li>
+						</div>
+<div class="lang-block" data-lang="fa" style="display:none" dir="rtl">
+							 <h2 class="major">متفرقه</h2>
+							 <p><h4> من در راه‌اندازی یک استارتاپ به نام Wavelite (که بعداً به HaiLa تغییر نام داد) در مونترال، بین مارس ۲۰۱۷ تا می ۲۰۱۹ مشارکت داشتم. HaiLa یک راه‌حل سخت‌افزاری و نرم‌افزاری اینترنت اشیا است که هدف آن توسعه مقیاس‌پذیر و پایدار حسگرهای اینترنت اشیا است. این فناوری چالش اصلی طول عمر محدود حسگرهای بی‌سیم را حل می‌کند. </h4><p>
+							 <p><h4>در آنجا به عنوان مدیر فنی کار می‌کردم و در ساخت نمونه‌های اولیه کاربردی، تدوین نقشه راه فناوری، استخدام نیرو، و هدایت توسعه نرم‌افزار و سخت‌افزار مشارکت داشتم. نتیجه کار ما ثبت چندین درخواست ثبت اختراع موقت تحت عنوان «سیستم‌ها و روش‌هایی برای دستگاه‌های بی‌سیم غیرفعال» بود، علاوه بر اختراعات خارجی که از طریق همکاری‌های دانشگاهی مجوز استفاده گرفتند.</h4></p>
+							 <li><h4><font color="#33FFFC"><a href=http://www.montrealintechnology.com/wavelite-receives-the-2018-ces-eureka-park-climate-change-award/=3230578> http://www.montrealintechnology.com/wavelite-receives-the-2018-ces-eureka-park-climate-change-award/=3230578</font></a> </h4></li>
+							 <li><h4><font color="#33FFFC"><a href=https://www.rfidjournal.com/articles/view?17653> https://www.rfidjournal.com/articles/view?17653 </font></a></h4></li>
+							 <p><h4>در کنار استارتاپ، اولین شعبه کانادایی Women of MENA in Tech را در مونترال بنیان‌گذاری کردم که در این مقاله معرفی شده است:</h4></p>
+							 <li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/inclusion/why-are-there-so-many-persian-women-in-technology/>Why Are There So Many Persian Women in Technology?</font></a>، مجله URelles، درباره بنیان‌گذاری شعبه مونترال</h4></li>
+						</div>
+</article>
 						<article id="Writing">
+<div class="lang-block" data-lang="en">
 							<h2 class="major">Talks &amp; Writing</h2>
-							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/owasp-ai-security-recap.pdf>A Hitchhiker's Guide to Using &amp; Securing AI</font></a> — Recap of OWASP AppSec Italy, June 2026: secure coding with AI, agentic security, guardrails, prompt injection, and trustworthy CI/CD.</h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/owasp-ai-security-recap.pdf>A Hitchhiker's Guide to Using &amp; Securing AI</font></a>, a recap of OWASP AppSec Italy, June 2026: secure coding with AI, agentic security, guardrails, prompt injection, and trustworthy CI/CD.</h4></li>
 							<li><h4><font color="#33FFFC"> <a href=https://baharxy.github.io/files/MSRMay2016.pdf>Presentation at Microsoft Research, Cambridge</font></a></h4></li>
 							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/LTE_listener.pdf>LTE Listener.</font></a> Work at MIT Senseable City Lab</h4></li>
 							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/wavelite_green.pdf>Wavelite White Paper: Impact of the Technology on Sustainability</font></a></h4></li>
-							<li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/portraits-en/alex-hanna-diversity-the-key-towards-ethical-design/>Alex Hanna: Diversity, the Key Towards Ethical Design</font></a> — Interview, URelles Magazine</h4></li>
-							<li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/portraits-en/fereshteh-forough-a-real-superhero-for-real-people/>Fereshteh Forough: A Real Superhero for Real People</font></a> — Interview, URelles Magazine</h4></li>
-							<li><h4><font color="#33FFFC"><a href=https://urelles.com/linda-liukas-a-programmer-a-storyteller-and-an-illustrator/>Linda Liukas: A Programmer, a Storyteller and an Illustrator</font></a> — Interview, URelles Magazine</h4></li>
-						</article>
+							<li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/portraits-en/alex-hanna-diversity-the-key-towards-ethical-design/>Alex Hanna: Diversity, the Key Towards Ethical Design</font></a>, an interview, URelles Magazine</h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/portraits-en/fereshteh-forough-a-real-superhero-for-real-people/>Fereshteh Forough: A Real Superhero for Real People</font></a>, an interview, URelles Magazine</h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://urelles.com/linda-liukas-a-programmer-a-storyteller-and-an-illustrator/>Linda Liukas: A Programmer, a Storyteller and an Illustrator</font></a>, an interview, URelles Magazine</h4></li>
+						</div>
+<div class="lang-block" data-lang="fr" style="display:none">
+							<h2 class="major">Interventions et écrits</h2>
+							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/owasp-ai-security-recap.pdf>A Hitchhiker's Guide to Using &amp; Securing AI</font></a>, un compte-rendu de l'OWASP AppSec Italie, juin 2026 : codage sécurisé avec l'IA, sécurité des agents, garde-fous, injection de prompt, et CI/CD digne de confiance.</h4></li>
+							<li><h4><font color="#33FFFC"> <a href=https://baharxy.github.io/files/MSRMay2016.pdf>Présentation à Microsoft Research, Cambridge</font></a></h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/LTE_listener.pdf>LTE Listener.</font></a> Travail réalisé au MIT Senseable City Lab</h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/wavelite_green.pdf>Livre blanc Wavelite : impact de la technologie sur la durabilité</font></a></h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/portraits-en/alex-hanna-diversity-the-key-towards-ethical-design/>Alex Hanna: Diversity, the Key Towards Ethical Design</font></a>, un entretien, magazine URelles</h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/portraits-en/fereshteh-forough-a-real-superhero-for-real-people/>Fereshteh Forough: A Real Superhero for Real People</font></a>, un entretien, magazine URelles</h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://urelles.com/linda-liukas-a-programmer-a-storyteller-and-an-illustrator/>Linda Liukas: A Programmer, a Storyteller and an Illustrator</font></a>, un entretien, magazine URelles</h4></li>
+						</div>
+<div class="lang-block" data-lang="fa" style="display:none" dir="rtl">
+							<h2 class="major">سخنرانی‌ها و نوشته‌ها</h2>
+							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/owasp-ai-security-recap.pdf>A Hitchhiker's Guide to Using &amp; Securing AI</font></a>، مروری بر کنفرانس OWASP AppSec ایتالیا، ژوئن ۲۰۲۶: کدنویسی امن با هوش مصنوعی، امنیت عامل‌های هوشمند، محافظ‌ها، تزریق پرامپت، و CI/CD قابل اعتماد.</h4></li>
+							<li><h4><font color="#33FFFC"> <a href=https://baharxy.github.io/files/MSRMay2016.pdf>ارائه در مایکروسافت ریسرچ، کمبریج</font></a></h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/LTE_listener.pdf>LTE Listener.</font></a> کار انجام‌شده در آزمایشگاه Senseable City دانشگاه MIT</h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/wavelite_green.pdf>گزارش سفید Wavelite: تأثیر فناوری بر پایداری</font></a></h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/portraits-en/alex-hanna-diversity-the-key-towards-ethical-design/>Alex Hanna: Diversity, the Key Towards Ethical Design</font></a>، یک مصاحبه، مجله URelles</h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://www.urelles.com/en/magazine/portraits-en/fereshteh-forough-a-real-superhero-for-real-people/>Fereshteh Forough: A Real Superhero for Real People</font></a>، یک مصاحبه، مجله URelles</h4></li>
+							<li><h4><font color="#33FFFC"><a href=https://urelles.com/linda-liukas-a-programmer-a-storyteller-and-an-illustrator/>Linda Liukas: A Programmer, a Storyteller and an Illustrator</font></a>، یک مصاحبه، مجله URelles</h4></li>
+						</div>
+</article>
 						<article id="Music">
+<div class="lang-block" data-lang="en">
 							<h2 class="major">Music</h2>
 							<p><h4> Self-similarity in Music: coming soon </h4></p>
-					 </article>
-
-							<!-- Community -->
+					 </div>
+<div class="lang-block" data-lang="fr" style="display:none">
+							<h2 class="major">Musique</h2>
+							<p><h4> Auto-similarité en musique : bientôt disponible </h4></p>
+					 </div>
+<div class="lang-block" data-lang="fa" style="display:none" dir="rtl">
+							<h2 class="major">موسیقی</h2>
+							<p><h4> خودمتشابهی در موسیقی: به‌زودی </h4></p>
+					 </div>
+</article>
 								<article id="community">
+<div class="lang-block" data-lang="en">
 									<h2 class="major">Community</h2>
 									<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
 									<ul class="actions">
@@ -145,23 +351,72 @@
 										<li><a href="http://n2women.comsoc.org", class="button big">N2 Women IEEE/ComSoc societ <br /> Fellow  and  organizer </a></li>
 										<li><span class="button big"> IEEE Conferences &amp; Journals <br /> Reviewer &amp; PC member </span></li>
 								  </ul>
-								</article>
-
-						<!-- Contact -->
+								</div>
+<div class="lang-block" data-lang="fr" style="display:none">
+									<h2 class="major">Communauté</h2>
+									<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+									<ul class="actions">
+										<li><a href="http://www.persianwomenintech.com" class="button big"> Women of MENA in Tech, Montréal <br /> Fondatrice et responsable du chapitre </a></li>
+										<li><a href="http://ai4good.aiweekmontreal.com", class="button big"> AI for Good <br /> Mentore </a></li>
+										<li><a href="https://www.aiforsocialgood.ca", class="button big"> AI for Social Good, école d'été <br /> Conférencière et mentore </a></li>
+							   	</ul>
+									<ul class="actions">
+										<li><a href="https://www.scss.tcd.ie/doug.leith/ST3009/" class="button big"> STU33009, Trinity College Dublin <br /> Assistante d'enseignement </a></li>
+										<li><span class="button big">NetLab, Trinity College Dublin <br /> Ancienne membre, organisatrice </span> </li>
+									</ul>
+									<ul class="actions">
+										<li><a href="http://n2women.comsoc.org", class="button big">N2 Women IEEE/ComSoc <br /> Membre et organisatrice </a></li>
+										<li><span class="button big"> Conférences et revues IEEE <br /> Évaluatrice et membre de comité de programme </span></li>
+								  </ul>
+								</div>
+<div class="lang-block" data-lang="fa" style="display:none" dir="rtl">
+									<h2 class="major">جامعه</h2>
+									<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
+									<ul class="actions">
+										<li><a href="http://www.persianwomenintech.com" class="button big"> Women of MENA in Tech، مونترال <br /> بنیان‌گذار و مدیر شعبه </a></li>
+										<li><a href="http://ai4good.aiweekmontreal.com", class="button big"> AI for Good <br /> منتور </a></li>
+										<li><a href="https://www.aiforsocialgood.ca", class="button big"> AI for Social Good، دوره تابستانی <br /> سخنران و منتور </a></li>
+							   	</ul>
+									<ul class="actions">
+										<li><a href="https://www.scss.tcd.ie/doug.leith/ST3009/" class="button big"> STU33009، دانشگاه Trinity College Dublin <br /> دستیار آموزشی </a></li>
+										<li><span class="button big">NetLab، دانشگاه Trinity College Dublin <br /> دانش‌آموخته، برگزارکننده </span> </li>
+									</ul>
+									<ul class="actions">
+										<li><a href="http://n2women.comsoc.org", class="button big">انجمن N2 Women IEEE/ComSoc <br /> عضو و برگزارکننده </a></li>
+										<li><span class="button big"> کنفرانس‌ها و مجلات IEEE <br /> داور و عضو کمیته برنامه </span></li>
+								  </ul>
+								</div>
+</article>
 							<article id="contact">
-								<h2 class="major">Contact</h2>
+								<h2 class="major">
+									<span class="lang-inline" data-lang="en">Contact</span>
+									<span class="lang-inline" data-lang="fr" style="display:none">Contact</span>
+									<span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">تماس</span>
+								</h2>
 								<form method="post" action="mailto:bpartovp@gmail.com">
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Name</label>
+											<label for="name">
+												<span class="lang-inline" data-lang="en">Name</span>
+												<span class="lang-inline" data-lang="fr" style="display:none">Nom</span>
+												<span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">نام</span>
+											</label>
 											<input type="text" name="name" id="name" />
 										</div>
 										<div class="field half">
-											<label for="email">Email</label>
+											<label for="email">
+												<span class="lang-inline" data-lang="en">Email</span>
+												<span class="lang-inline" data-lang="fr" style="display:none">Courriel</span>
+												<span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">ایمیل</span>
+											</label>
 											<input type="text" name="email" id="email" />
 										</div>
 										<div class="field">
-											<label for="message">Message</label>
+											<label for="message">
+												<span class="lang-inline" data-lang="en">Message</span>
+												<span class="lang-inline" data-lang="fr" style="display:none">Message</span>
+												<span class="lang-inline" data-lang="fa" style="display:none" dir="rtl">پیام</span>
+											</label>
 											<textarea name="message" id="message" rows="4"></textarea>
 										</div>
 									</div>
@@ -178,13 +433,31 @@
 								</ul>
 							</article>
 						<article id="resume">
+<div class="lang-block" data-lang="en">
 							<h2 class="major">Resume</h2>
-							<p><h4>Two honest cuts of the same person — pick your favourite.</h4></p>
+							<p><h4>Two honest cuts of the same person, pick your favourite.</h4></p>
 							<ul class="actions">
 								<li><a href="https://baharxy.github.io/files/cv-researcher.html" style="font-size:20px;color:#33FFFC;text-decoration:none"><button><i class="fa fa-flask"> The Researcher</i></button></a></li>
 								<li><a href="https://baharxy.github.io/files/cv-engineer.html" style="font-size:20px;color:#33FFFC;text-decoration:none"><button><i class="fa fa-code"> The Engineer</i></button></a></li>
 							</ul>
-						</article>
+						</div>
+<div class="lang-block" data-lang="fr" style="display:none">
+							<h2 class="major">CV</h2>
+							<p><h4>Deux facettes honnêtes de la même personne, choisissez votre préférée.</h4></p>
+							<ul class="actions">
+								<li><a href="https://baharxy.github.io/files/cv-researcher.html" style="font-size:20px;color:#33FFFC;text-decoration:none"><button><i class="fa fa-flask"> La Chercheuse</i></button></a></li>
+								<li><a href="https://baharxy.github.io/files/cv-engineer.html" style="font-size:20px;color:#33FFFC;text-decoration:none"><button><i class="fa fa-code"> L'Ingénieure</i></button></a></li>
+							</ul>
+						</div>
+<div class="lang-block" data-lang="fa" style="display:none" dir="rtl">
+							<h2 class="major">رزومه</h2>
+							<p><h4>دو روایت صادقانه از یک نفر، مورد دلخواه خود را انتخاب کنید.</h4></p>
+							<ul class="actions">
+								<li><a href="https://baharxy.github.io/files/cv-researcher.html" style="font-size:20px;color:#33FFFC;text-decoration:none"><button><i class="fa fa-flask"> پژوهشگر</i></button></a></li>
+								<li><a href="https://baharxy.github.io/files/cv-engineer.html" style="font-size:20px;color:#33FFFC;text-decoration:none"><button><i class="fa fa-code"> مهندس</i></button></a></li>
+							</ul>
+						</div>
+</article>
 
 					</div>
 
@@ -204,6 +477,28 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				(function() {
+					function setLang(lang) {
+						document.querySelectorAll('.lang-block, .lang-inline').forEach(function(el) {
+							el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+						});
+						document.querySelectorAll('.lang-btn').forEach(function(btn) {
+							btn.classList.toggle('active', btn.getAttribute('data-setlang') === lang);
+						});
+						document.body.classList.toggle('rtl-mode', lang === 'fa');
+						try { localStorage.setItem('site-lang', lang); } catch (e) {}
+					}
+					document.querySelectorAll('.lang-btn').forEach(function(btn) {
+						btn.addEventListener('click', function() {
+							setLang(btn.getAttribute('data-setlang'));
+						});
+					});
+					var saved = 'en';
+					try { saved = localStorage.getItem('site-lang') || 'en'; } catch (e) {}
+					setLang(saved);
+				})();
+			</script>
 
 	</body>
 </html>
