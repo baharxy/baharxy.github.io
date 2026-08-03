@@ -38,6 +38,19 @@
 			body.rtl-mode .lang-inline[dir="rtl"] {
 				text-align: right;
 			}
+			/* Fix button overflow for longer French/Persian text */
+			.button {
+				white-space: normal !important;
+				height: auto !important;
+				min-height: 2.75rem;
+				line-height: 1.4 !important;
+				padding-top: 0.6rem !important;
+				padding-bottom: 0.6rem !important;
+				word-wrap: break-word;
+			}
+			.button.big {
+				min-height: 5.0625rem;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -177,7 +190,7 @@
 									<li><a href="#Entrepreneurship" class="button">Divers</a></li>
 							  </ul>
 							  <ul class="actions">
-									<li><a href="#Writing" class="button">Interventions et écrits</a></li>
+									<li><a href="#Writing" class="button">Écrits et prises de parole</a></li>
 									<li><a href="#Music" class="button">Musique</a></li>
 						  	</ul>
 							</div>
@@ -300,7 +313,7 @@
 							<li><h4><font color="#33FFFC"><a href=https://urelles.com/linda-liukas-a-programmer-a-storyteller-and-an-illustrator/>Linda Liukas: A Programmer, a Storyteller and an Illustrator</font></a>, an interview, URelles Magazine</h4></li>
 						</div>
 <div class="lang-block" data-lang="fr" style="display:none">
-							<h2 class="major">Interventions et écrits</h2>
+							<h2 class="major">Écrits et prises de parole</h2>
 							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/owasp-ai-security-recap.pdf>A Hitchhiker's Guide to Using &amp; Securing AI</font></a>, un compte-rendu de l'OWASP AppSec Italie, juin 2026 : codage sécurisé avec l'IA, sécurité des agents, garde-fous, injection de prompt, et CI/CD digne de confiance.</h4></li>
 							<li><h4><font color="#33FFFC"> <a href=https://baharxy.github.io/files/MSRMay2016.pdf>Présentation à Microsoft Research, Cambridge</font></a></h4></li>
 							<li><h4><font color="#33FFFC"><a href=https://baharxy.github.io/files/LTE_listener.pdf>LTE Listener.</font></a> Travail réalisé au MIT Senseable City Lab</h4></li>
