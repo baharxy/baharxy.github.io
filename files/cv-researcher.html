@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bahar Partov Poor — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a18;
+    --paper: #f7f4ef;
+    --accent: #8b4513;
+    --accent-light: #c4845a;
+    --muted: #6b6860;
+    --rule: #d4cfc6;
+    --col-left: 200px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 9.5pt;
+    line-height: 1.6;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 54px 60px;
+    background: var(--paper);
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+    gap: 24px;
+  }
+
+  .name-block h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 38pt;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .name-block h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .name-block .title {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5pt;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  .contact-block {
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5pt;
+    color: var(--muted);
+    line-height: 1.9;
+  }
+
+  .contact-block a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    display: grid;
+    grid-template-columns: var(--col-left) 1fr;
+    gap: 0 28px;
+    margin-bottom: 26px;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 6.5pt;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-top: 2px;
+    text-align: right;
+    border-right: 1px solid var(--rule);
+    padding-right: 20px;
+  }
+
+  .section-body {
+    padding-left: 4px;
+  }
+
+  /* ── PROFILE ── */
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+  }
+
+  .profile-item {
+    border-left: 2px solid var(--accent-light);
+    padding-left: 10px;
+  }
+
+  .profile-item .pi-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 6.5pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .profile-item p {
+    font-size: 8.5pt;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  /* ── SKILLS TAGS ── */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 4px;
+  }
+
+  .tag {
+    background: rgba(139,69,19,0.08);
+    border: 1px solid rgba(139,69,19,0.2);
+    color: var(--accent);
+    font-family: 'DM Mono', monospace;
+    font-size: 6.5pt;
+    padding: 2px 8px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── ENTRY ── */
+  .entry {
+    margin-bottom: 14px;
+    position: relative;
+  }
+
+  .entry:not(:last-child) {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .entry-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 12pt;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .entry-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .entry-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 7pt;
+    color: var(--muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .entry-sub {
+    font-size: 8pt;
+    color: var(--muted);
+    margin: 1px 0 5px;
+    font-style: italic;
+  }
+
+  .entry ul {
+    padding-left: 14px;
+    list-style: none;
+  }
+
+  .entry ul li {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 3px;
+    font-size: 8.5pt;
+    line-height: 1.55;
+    color: #2d2d2b;
+  }
+
+  .entry ul li::before {
+    content: '—';
+    position: absolute;
+    left: -2px;
+    color: var(--accent-light);
+    font-size: 8pt;
+  }
+
+  /* ── GRANTS ── */
+  .grant-row {
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    gap: 0 12px;
+    align-items: baseline;
+    margin-bottom: 5px;
+    font-size: 8.5pt;
+  }
+
+  .grant-amount {
+    font-family: 'DM Mono', monospace;
+    font-size: 7.5pt;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .grant-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 7pt;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  /* ── SERVICE ── */
+  .service-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 12px;
+    align-items: baseline;
+    margin-bottom: 4px;
+    font-size: 8.5pt;
+  }
+
+  .service-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 7pt;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    grid-column: 1 / -1;
+    height: 1px;
+    background: var(--rule);
+    margin: 4px 0 20px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 32px;
+    padding-top: 12px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer span {
+    font-family: 'DM Mono', monospace;
+    font-size: 6.5pt;
+    color: var(--rule);
+    letter-spacing: 1px;
+  }
+
+  footer .dot {
+    width: 5px;
+    height: 5px;
+    background: var(--accent-light);
+    border-radius: 50%;
+  }
+
+  /* ── PUBLICATIONS ── */
+  .pub-entry {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 0 10px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 8.5pt;
+    line-height: 1.5;
+  }
+  .pub-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 7pt;
+    color: var(--accent);
+    padding-top: 2px;
+  }
+  .pub-body em { color: var(--muted); font-style: italic; }
+
+  /* ── PUBLICATIONS ── */
+  .pub-entry {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 0 10px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 8.5pt;
+    line-height: 1.5;
+  }
+  .pub-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 7pt;
+    color: var(--accent);
+    padding-top: 2px;
+  }
+  .pub-body em { color: var(--muted); font-style: italic; }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; }
+    .page { padding: 32px 42px; max-width: 100%; }
+    @page { size: A4; margin: 0; }
+  }
+
+  /* ── ANIMATIONS (screen only) ── */
+  @media screen {
+    .section { opacity: 0; transform: translateY(8px); animation: fadeUp 0.5s ease forwards; }
+    .section:nth-child(1) { animation-delay: 0.05s; }
+    .section:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(3) { animation-delay: 0.15s; }
+    .section:nth-child(4) { animation-delay: 0.2s; }
+    .section:nth-child(5) { animation-delay: 0.25s; }
+    .section:nth-child(6) { animation-delay: 0.3s; }
+    .section:nth-child(7) { animation-delay: 0.35s; }
+    .section:nth-child(8) { animation-delay: 0.4s; }
+    header { opacity: 0; animation: fadeUp 0.4s ease 0s forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: none; } }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="name-block">
+      <h1>Bahar <em>Partov Poor</em></h1>
+      <div class="title">Researcher &amp; Technologist &nbsp;·&nbsp; Computer Science PhD</div>
+    </div>
+    <div class="contact-block">
+      <a href="/cdn-cgi/l/email-protection#a5c7c4cdc4d7d5e5c6d6c4ccc98bc8ccd18bc0c1d0"><span class="__cf_email__" data-cfemail="197b7871786b69597a6a7870753774706d377c7d6c">[email&#160;protected]</span></a><br>
+      <a href="https://baharxy.github.io">baharxy.github.io</a><br>
+      <a href="https://github.com/baharxy">GitHub 1</a> &nbsp;·&nbsp; <a href="https://github.com/bpartov-tc">GitHub 2</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/baharpartovp">LinkedIn</a>
+    </div>
+  </header>
+
+  <!-- RESEARCH PROFILE -->
+  <div class="section">
+    <div class="section-label">Research<br>Profile</div>
+    <div class="section-body">
+      <div class="profile-grid">
+        <div class="profile-item">
+          <span class="pi-label">Interests</span>
+          <p>Optimization and decision-making under uncertainty · energy-efficient, responsible, and secure AI systems · exploring internet security boundaries</p>
+        </div>
+        <div class="profile-item">
+          <span class="pi-label">Output</span>
+          <p>14 peer-reviewed publications (conferences &amp; journals) · <strong>188 citations</strong> · <a href="https://scholar.google.com/citations?user=FyIV8yoAAAAJ&hl=en" style="color:var(--accent);text-decoration:none">Google Scholar ↗</a></p>
+        </div>
+        <div class="profile-item" style="grid-column: 1/-1;">
+          <span class="pi-label">Technical Skills</span>
+          <div class="tags">
+            <span class="tag">Network Programming</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Distributed Algorithms</span>
+            <span class="tag">Agentic AI</span>
+            <span class="tag">Penetration Testing</span>
+            <span class="tag">CI/CD Pipelines</span>
+            <span class="tag">Network Simulation</span>
+            <span class="tag">IoT / Programmable Radios</span>
+            <span class="tag">Optoelectronic Devices</span>
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+            <span class="tag">Go</span>
+            <span class="tag">Matlab</span>
+            <span class="tag">R</span>
+            <span class="tag">Java</span>
+            <span class="tag">Perl</span>
+            <span class="tag">Bash</span>
+          </div>
+        </div>
+        <div class="profile-item">
+          <span class="pi-label">Languages</span>
+          <p>English (fluent) · French (B2) · Persian (native)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-label">Education</div>
+    <div class="section-body">
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">PhD in Computer Science — <em>Hamilton Institute / Nokia Bell Labs</em></div>
+          <div class="entry-date">2012 – 2015</div>
+        </div>
+        <div class="entry-sub">Maynooth University &amp; Nokia Bell Labs, Dublin, Ireland · Full scholarship</div>
+        <ul>
+          <li>Thesis: <em>Resource Allocation for Next Generation RANs</em></li>
+          <li>Advisor: Prof. Douglas Leith · Committee: Prof. Merouane Debbah, Dr. Rudi Villing, Dr. Catherine Hurley</li>
+          <li>Industrial advisors: Dr. Holger Claussen &amp; Dr. Rouzbeh Razavi (Bell Labs)</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">MSc in Telecommunications and Information Systems — <em>University of Essex</em></div>
+          <div class="entry-date">2008 – 2009</div>
+        </div>
+        <div class="entry-sub">GPA 87/100 · Graduated with Distinction · Telecom Technologies Prize</div>
+        <ul>
+          <li>Thesis: <em>Novel Video Streaming over IEEE 802.16 Networks</em></li>
+          <li>Advisors: Prof. Mohammed Ghanbari, Prof. Martin Fleury</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">BSc in Electrical Engineering (minor: Communications) — <em>Iran</em></div>
+          <div class="entry-date">2003 – 2007</div>
+        </div>
+        <div class="entry-sub">GPA 17.53/20 · Ranked 1st among Communications Engineering students</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- RESEARCH EXPERIENCE -->
+  <div class="section">
+    <div class="section-label">Research<br>Experience</div>
+    <div class="section-body">
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Visiting Postdoctoral Fellow — <em>MIT CSAIL (Katabi Lab) &amp; Sensable City Lab</em></div>
+          <div class="entry-date">2016 – 2017</div>
+        </div>
+        <div class="entry-sub">Cambridge, USA</div>
+        <ul>
+          <li>Contributed to new project design at Sensable City Lab, including Philips smart lighting and city scanner (Python, Bash, Matlab)</li>
+          <li>Developed synchronisation algorithms for large-scale LTE networks (C++, srsLTE) achieving 2.7× throughput improvement over conventional methods</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Research Fellow — <em>Trinity College Dublin (NetLab)</em></div>
+          <div class="entry-date">2015 – 2016</div>
+        </div>
+        <div class="entry-sub">School of Computer Science and Statistics, Dublin, Ireland</div>
+        <ul>
+          <li>Designed experiments on network delay impact on LTE and WiFi links, generating insights for multipath TCP scheduler design</li>
+          <li>Built lightweight, privacy-preserving recommendation systems for WiFi AP selection using supervised learning</li>
+          <li>Investigated distributed optimisation for network utility maximisation and auction algorithms</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">PhD Research Fellow — <em>Hamilton Institute / Nokia Bell Labs</em></div>
+          <div class="entry-date">2012 – 2015</div>
+        </div>
+        <ul>
+          <li>Proposed mathematical models for resource allocation in 5G radio access networks via convex optimisation and game theory</li>
+          <li>Applied ML, data analytics, and distributed optimisation to wireless resource management (Matlab, R, Java)</li>
+          <li>Produced 6 peer-reviewed publications during the PhD (part of 14 total career publications with 188 citations)</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INDUSTRY -->
+  <div class="section">
+    <div class="section-label">Industry<br>Experience</div>
+    <div class="section-body">
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Engineering Manager, Security — <em>Tucows Inc</em></div>
+          <div class="entry-date">May 2025 – present</div>
+        </div>
+        <div class="entry-sub">Remote</div>
+        <ul>
+          <li>Leading the engineering team and cross-functional SDLC security initiatives, while remaining hands-on with backend security and DNS abuse mitigation</li>
+          <li>Applying AI-driven tooling to strengthen security operations and SDLC workflows</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Software Engineer: Back-end &amp; Security — <em>Tucows Inc</em></div>
+          <div class="entry-date">2020 – 2025</div>
+        </div>
+        <ul>
+          <li>Developed security plugins and abuse-detection packages for large-scale networked systems (Go, Perl, Lua, Bash)</li>
+          <li>Designed REST APIs and micro-service observability platform (Grafana, PostgreSQL, RabbitMQ)</li>
+          <li>Represented Tucows in ICANN's CPH/TechOps working group</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Co-Founder &amp; Tech Lead — <em>Wavelite / Haila Technologies (TandemLaunch VC)</em></div>
+          <div class="entry-date">2017 – 2019</div>
+        </div>
+        <div class="entry-sub">Montréal, Canada</div>
+        <ul>
+          <li>Raised 600K CAD; built passive IoT sensor prototypes using WiFi signals (C++, FPGAs, MQTT)</li>
+          <li>CES Eureka Park Climate Change Award (2018); covered by RFID Journal; signed contract with major German home automation company</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Engineer — <em>Oclaro Inc (now Lumentum)</em></div>
+          <div class="entry-date">2010 – 2012</div>
+        </div>
+        <div class="entry-sub">Paignton, UK</div>
+        <ul>
+          <li>Developed test automation (C#) and contributed to applied research on optical lasers for wind turbine sensing</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TEACHING -->
+  <div class="section">
+    <div class="section-label">Teaching &amp;<br>Supervision</div>
+    <div class="section-body">
+      <div class="entry">
+        <div class="service-row">
+          <span><strong>Lecturer &amp; Mentor</strong> — AI for Social Good Summer School, Canada</span>
+          <span class="service-date">2018, 2019</span>
+        </div>
+        <div style="color:var(--muted);font-size:8pt;margin-bottom:4px">Delivered workshops and mentored selected students nationwide</div>
+      </div>
+      <div class="entry">
+        <div class="service-row">
+          <span><strong>Graduate Student Supervisor</strong> — NSERC &amp; Mitacs funded internships (Dalhousie, Polytechnique Montréal)</span>
+          <span class="service-date">2017 – 2018</span>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="service-row">
+          <span><strong>Teaching Assistant</strong> — STU33009: Statistical Methods for Computer Science (BSc Yr 3), TCD</span>
+          <span class="service-date">2015 – 2016</span>
+        </div>
+      </div>
+      <div class="entry" style="border:none;margin:0;padding:0">
+        <div class="service-row">
+          <span><strong>Seminar Organiser</strong> — Weekly research seminar series, School of CS &amp; Statistics, TCD</span>
+          <span class="service-date">2015 – 2016</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRANTS -->
+  <div class="section">
+    <div class="section-label">Grants &amp;<br>Funding</div>
+    <div class="section-body">
+      <div class="grant-row"><span class="grant-amount">600K CAD</span><span>Seed Investment — Wavelite / Haila Technologies · TandemLaunch Inc.</span><span class="grant-date">2017</span></div>
+      <div class="grant-row"><span class="grant-amount">60K CAD</span><span>Mitacs Canada (×2) — Graduate student internship / university-industrial partnership</span><span class="grant-date">2017</span></div>
+      <div class="grant-row"><span class="grant-amount">25K CAD</span><span>NSERC Canada — Ultra low-power RF energy detection ICs · Dalhousie University</span><span class="grant-date">2018</span></div>
+      <div class="grant-row"><span class="grant-amount">25K CAD</span><span>NSERC Canada — Low-power digital design techniques · Polytechnique Montréal</span><span class="grant-date">2017</span></div>
+      <div class="grant-row"><span class="grant-amount">Travel</span><span>CRA / ACM SIGMOBILE (MobiCom)</span><span class="grant-date">2016</span></div>
+      <div class="grant-row"><span class="grant-amount">Fellowship</span><span>N2 Women Young Researcher Fellowship · Microsoft Research &amp; HP Labs</span><span class="grant-date">2015</span></div>
+      <div class="grant-row"><span class="grant-amount">Full PhD</span><span>Hamilton Institute &amp; Nokia Bell Labs Scholarship</span><span class="grant-date">2012–15</span></div>
+    </div>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div class="section">
+    <div class="section-label">Selected<br>Publications</div>
+    <div class="section-body">
+      <div style="font-family:'DM Mono',monospace;font-size:6.5pt;color:var(--muted);letter-spacing:1px;margin-bottom:8px;">14 PEER-REVIEWED PUBLICATIONS · 188 CITATIONS · <a href="https://scholar.google.com/citations?user=FyIV8yoAAAAJ&hl=en" style="color:var(--accent);text-decoration:none">FULL LIST ON GOOGLE SCHOLAR ↗</a></div>
+      <div class="pub-entry">
+        <span class="pub-year">2018</span>
+        <span class="pub-body"><strong>Chorus: Truly Distributed Distributed-MIMO.</strong> B. Partov Poor et al. <em>ACM SIGCOMM.</em></span>
+      </div>
+      <div class="pub-entry">
+        <span class="pub-year">2017</span>
+        <span class="pub-body"><strong>Utility Fair Rate Allocation in LTE/802.11 Heterogeneous Networks.</strong> B. Partov Poor et al. <em>IEEE/ACM Transactions on Networking.</em></span>
+      </div>
+      <div class="pub-entry">
+        <span class="pub-year">2017</span>
+        <span class="pub-body"><strong>Recommending Access Points to Mobile Users via Automatic Group Learning.</strong> B. Partov Poor et al. <em>IEEE ICC.</em></span>
+      </div>
+      <div class="pub-entry">
+        <span class="pub-year">2017</span>
+        <span class="pub-body"><strong>Real-Time Cloud Robotics in Practical Smart City Applications.</strong> B. Partov Poor et al. <em>IEEE PIMRC.</em></span>
+      </div>
+      <div class="pub-entry">
+        <span class="pub-year">2016</span>
+        <span class="pub-body"><strong>Experimental Evaluation of Multi-Path Schedulers for LTE/Wi-Fi.</strong> B. Partov Poor et al. <em>WiNTECH @ ACM MobiCom.</em></span>
+      </div>
+      <div class="pub-entry">
+        <span class="pub-year">2015</span>
+        <span class="pub-body"><strong>Utility Fair Optimization of Antenna Tilt Angles in LTE Networks.</strong> B. Partov Poor et al. <em>IEEE/ACM Transactions on Networking.</em></span>
+      </div>
+      <div class="pub-entry">
+        <span class="pub-year">2015</span>
+        <span class="pub-body"><strong>Dynamic Idle Mode Control in Small Cell Networks.</strong> B. Partov Poor et al. <em>IEEE ICC.</em></span>
+      </div>
+      <div class="pub-entry">
+        <span class="pub-year">2014</span>
+        <span class="pub-body"><strong>Energy-Aware Configuration of Small Cell Networks.</strong> B. Partov Poor et al. <em>IEEE PIMRC.</em></span>
+      </div>
+      <div class="pub-entry" style="border-bottom:none;margin-bottom:0;">
+        <span class="pub-year">2014</span>
+        <span class="pub-body"><strong>Tilt Angle Adaptation in LTE Networks with Advanced Interference Mitigation.</strong> B. Partov Poor et al. <em>IEEE PIMRC.</em></span>
+      </div>
+      <div style="margin-top:8px;font-size:8pt;color:var(--muted);font-style:italic;">+ 5 additional publications — see Google Scholar for complete list.</div>
+    </div>
+  </div>
+
+  <!-- SERVICE -->
+  <div class="section">
+    <div class="section-label">Scientific &amp;<br>Community<br>Service</div>
+    <div class="section-body">
+      <div class="service-row"><span><strong>Reviewer &amp; Programme Committee Member</strong> — IEEE Conferences &amp; Journals (wireless networking &amp; communications)</span><span class="service-date">2012 – 2025</span></div>
+      <div style="margin-bottom:4px"></div>
+      <div class="service-row"><span><strong>Founder &amp; Chapter Lead</strong> — Women of MENA in Tech, Montréal · founded the first Canadian chapter; grew it into recurring career fairs &amp; monthly professional events</span><span class="service-date">2018 – 2020</span></div>
+      <div style="margin-bottom:4px"></div>
+      <div class="service-row"><span><strong>Volunteer</strong> — Service d'Entraide Saint-Romuald · neighbourhood social support</span><span class="service-date">2022 – present</span></div>
+      <div style="margin-bottom:4px"></div>
+      <div class="service-row"><span><strong>Volunteer Mapper</strong> — Crowd2map Tanzania · crowd-mapping rural Tanzania to support anti-FGM efforts</span><span class="service-date">2018</span></div>
+    </div>
+  </div>
+
+  <footer
